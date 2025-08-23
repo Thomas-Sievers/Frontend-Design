@@ -84,3 +84,23 @@ footer {
 
 .row-span {grid-row: span 2;}
 .col-span {grid-column: span 2;}
+
+@midia(width <= 1024px){
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+    }
+
+    .col-span{
+        grid-column: span 1;
+    }
+}
+
+@media(width <= 650px){
+    .product-grid{
+        grid-template-columns: repeat(1, minmax(auto, 1fr));
+    }
+
+    .col-span{
+        grid-column: span 1;
+    }
+}
